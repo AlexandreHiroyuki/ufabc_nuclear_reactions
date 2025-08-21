@@ -66,7 +66,7 @@ def calculate_activity(N, lambda_decay):
         lambda_decay: constante de decaimento
     
     Returns:
-        A: atividade em decai/ano
+        A: atividade em decaimento/ano
     """
     return lambda_decay * N
 
@@ -116,7 +116,7 @@ ax3.set_ylabel('Número de Núcleos N(t)')
 ax3.set_title('Decaimento Ra-226 → Rn-222\nPopulação de Núcleos')
 ax3.legend()
 ax3.grid(True, alpha=0.3)
-ax3.set_xlim(0, 10)  # Escala menor para Ra-226
+ax3.set_xlim(0, 10)
 
 # Gráfico 4: Atividades A(t) - Ra-226 → Rn-222
 ax4 = fig.add_subplot(gs[1, 1])
@@ -127,12 +127,11 @@ ax4.set_ylabel('Atividade A(t) (decai/ano)')
 ax4.set_title('Decaimento Ra-226 → Rn-222\nAtividade Radioativa')
 ax4.legend()
 ax4.grid(True, alpha=0.3)
-ax4.set_xlim(0, 10)  # Escala menor para Ra-226
+ax4.set_xlim(0, 10)
 
 plt.tight_layout()
 plt.show()
 
-# Imprimir informações sobre o sistema
 print("=== ANÁLISE DO DECAIMENTO NUCLEAR ===")
 print(f"Meia-vida U-234: {T_half_U234:,.0f} anos")
 print(f"Meia-vida Th-230: {T_half_Th230:,.0f} anos")
